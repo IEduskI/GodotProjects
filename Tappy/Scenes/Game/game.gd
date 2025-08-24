@@ -24,3 +24,7 @@ func spawnPipes() -> void:
 
 func _on_spawn_timer_timeout() -> void:
 	spawnPipes()
+
+
+func on_plane_died() -> void:
+	get_tree().paused = true

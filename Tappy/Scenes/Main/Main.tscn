@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://fjwss87k852v"]
+
+[ext_resource type="Texture2D" uid="uid://ioyluj08weum" path="res://assets/background/sky.png" id="1_p8rbg"]
+[ext_resource type="LabelSettings" uid="uid://cqe6buh1w1bgx" path="res://Resources/orange_title_96.tres" id="2_cmk6n"]
+[ext_resource type="LabelSettings" uid="uid://djq2eiv2csrsu" path="res://Resources/orange_score_32.tres" id="3_i3fi7"]
+[ext_resource type="FontFile" uid="uid://b722ddlqiclkj" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="4_i3fi7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o8wgc"]
+font = ExtResource("4_i3fi7")
+font_size = 48
+outline_size = 3
+outline_color = Color(0.321446, 0.664559, 0.817487, 0.968627)
+shadow_color = Color(0.321569, 0.662745, 0.815686, 0.968627)
+shadow_offset = Vector2(2, 2)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_p8rbg")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="TitleLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "TAPPY
+PLANE"
+label_settings = ExtResource("2_cmk6n")
+
+[node name="HighscoreLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "HIGSCORE"
+label_settings = ExtResource("3_i3fi7")
+
+[node name="HighscoreText" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "0000"
+label_settings = ExtResource("3_i3fi7")
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PRESS SPACE
+TO
+PLAY"
+label_settings = SubResource("LabelSettings_o8wgc")
+horizontal_alignment = 1
