@@ -6,6 +6,7 @@ const JUMP_POWER: float = -350.0
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var engine_sound: AudioStreamPlayer = $EngineSound
 
 #signal on_plane_died
 
@@ -28,6 +29,7 @@ func fly(delta: float) -> void:
 		animation_player.play("jump")
 
 func die() -> void:
+	engine_sound.stop()
 	animated_sprite_2d.stop()
 	set_physics_process(false)
 	SignalHub.emitOnPlaneDied()
