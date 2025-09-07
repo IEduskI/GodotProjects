@@ -1,16 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds7b3p4hl516"]
+[gd_scene load_steps=5 format=3 uid="uid://ds7b3p4hl516"]
 
 [ext_resource type="LabelSettings" uid="uid://djq2eiv2csrsu" path="res://Resources/orange_score_32.tres" id="1_556m7"]
+[ext_resource type="Script" uid="uid://0oe8h0fxuuun" path="res://Scenes/GameUI/gameUI.gd" id="1_iq8cv"]
 [ext_resource type="LabelSettings" uid="uid://c1l6ae32scetr" path="res://Resources/blue_space_48.tres" id="2_iq8cv"]
 [ext_resource type="LabelSettings" uid="uid://bp8p8lpa6vljf" path="res://Resources/orange_title_72.tres" id="3_jwnss"]
 
 [node name="GameUI" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_iq8cv")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -19,13 +22,14 @@ offset_bottom = 40.0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 
-[node name="Label" type="Label" parent="MarginContainer"]
+[node name="ScoreLabel" type="Label" parent="MarginContainer"]
 layout_mode = 2
 text = "0000
 "
 label_settings = ExtResource("1_556m7")
 
 [node name="PressSpaceLabel" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -42,6 +46,7 @@ text = "Press Space"
 label_settings = ExtResource("2_iq8cv")
 
 [node name="GameOverLabel" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -56,3 +61,8 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Game Over"
 label_settings = ExtResource("3_jwnss")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

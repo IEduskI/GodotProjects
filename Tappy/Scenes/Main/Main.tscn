@@ -1,19 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://fjwss87k852v"]
+[gd_scene load_steps=9 format=3 uid="uid://fjwss87k852v"]
 
 [ext_resource type="Texture2D" uid="uid://ioyluj08weum" path="res://assets/background/sky.png" id="1_p8rbg"]
 [ext_resource type="Script" uid="uid://bwm64n1nq4vw3" path="res://Scenes/Main/main.gd" id="1_w20t6"]
 [ext_resource type="LabelSettings" uid="uid://cqe6buh1w1bgx" path="res://Resources/orange_title_96.tres" id="2_cmk6n"]
 [ext_resource type="LabelSettings" uid="uid://djq2eiv2csrsu" path="res://Resources/orange_score_32.tres" id="3_i3fi7"]
-[ext_resource type="FontFile" uid="uid://b722ddlqiclkj" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="4_i3fi7"]
 [ext_resource type="AudioStream" uid="uid://cqv75nj2fgoly" path="res://assets/audio/bgm_menu.mp3" id="5_o8wgc"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_o8wgc"]
-font = ExtResource("4_i3fi7")
-font_size = 48
-outline_size = 3
-outline_color = Color(0.321446, 0.664559, 0.817487, 0.968627)
-shadow_color = Color(0.321569, 0.662745, 0.815686, 0.968627)
-shadow_offset = Vector2(2, 2)
+[ext_resource type="LabelSettings" uid="uid://c1l6ae32scetr" path="res://Resources/blue_space_48.tres" id="5_w20t6"]
 
 [sub_resource type="Animation" id="Animation_i3fi7"]
 resource_name = "flash"
@@ -96,7 +88,7 @@ size_flags_horizontal = 4
 text = "PRESS SPACE
 TO
 PLAY"
-label_settings = ExtResource("4_i3fi7")
+label_settings = ExtResource("5_w20t6")
 horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
