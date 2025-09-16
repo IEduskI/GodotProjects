@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://citbkh8n8rf8u"]
+
+[ext_resource type="Texture2D" uid="uid://p1jaaxg3g1ut" path="res://assets/env/elementStone025.png" id="1_dr6pc"]
+[ext_resource type="Texture2D" uid="uid://3mpdrkwepqx2" path="res://icon.svg" id="2_wjuvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjuvt"]
+size = Vector2(20, 678)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr6pc"]
+size = Vector2(26, 1176)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1h1h0"]
+radius = 30.5941
+
+[node name="Test" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(8, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-2.5, 325.5)
+scale = Vector2(0.414286, 3.18636)
+texture = ExtResource("1_dr6pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 329)
+shape = SubResource("RectangleShape2D_wjuvt")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(-2.5, 326)
+scale = Vector2(0.414286, 3.18182)
+texture = ExtResource("1_dr6pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(0, 329)
+shape = SubResource("RectangleShape2D_wjuvt")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(659, 659)
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(-5, 79)
+scale = Vector2(0.414286, 5.39886)
+texture = ExtResource("1_dr6pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-3, 77)
+shape = SubResource("RectangleShape2D_dr6pc")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(296, 191)
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wjuvt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_1h1h0")

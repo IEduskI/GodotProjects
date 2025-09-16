@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4hmg6i17ute5"]
+
+[ext_resource type="PackedScene" uid="uid://bd5v5g8ymkqw2" path="res://Scenes/LevelBase/LevelBase.tscn" id="1_i6yup"]
+[ext_resource type="PackedScene" uid="uid://ckjapvxnu27xs" path="res://Scenes/Cup/Cup.tscn" id="2_fb302"]
+[ext_resource type="PackedScene" uid="uid://ckmdukbsjbjm0" path="res://Scenes/Rebound/Rebound.tscn" id="3_nvsc8"]
+
+[node name="Level1" instance=ExtResource("1_i6yup")]
+
+[node name="Cup" parent="." index="4" instance=ExtResource("2_fb302")]
+position = Vector2(365, 344)
+
+[node name="Rebound" parent="." index="5" instance=ExtResource("3_nvsc8")]
+position = Vector2(685, 397)
+rotation = -0.290449
